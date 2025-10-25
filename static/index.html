@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gemini Playground — Dark Mode</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="panel glass">
+      <h1 class="title">Welcome to Rooman's AI</h1>
+
+      <div class="form">
+        <label class="label">Prompt</label>
+        <textarea id="prompt" placeholder="Type your prompt..." rows="6"></textarea>
+
+        <div class="inline">
+          <div class="select-group">
+            <label class="label">Model</label>
+            <select id="model">
+              <option value="gemini-2.5-flash">gemini-2.5-flash</option>
+              <option value="gemini-2.5-pro">gemini-2.5-pro</option>
+            </select>
+          </div>
+          <div class="buttons">
+            <button id="submit" class="btn primary">Ask Rooman</button>
+            <button id="clear" class="btn">Clear</button>
+          </div>
+        </div>
+
+        <div id="loader" class="loader hidden">Rooman is Thinking…</div>
+
+        <label class="label">Response</label>
+        <pre id="response" class="response"></pre>
+
+        <div class="bottom-bar">
+          <button id="copy" class="btn small">Copy</button>
+          <span id="status" class="status"></span>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>⚡ Powered by <strong>Google Gemini</strong> | FastAPI Proxy</p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
